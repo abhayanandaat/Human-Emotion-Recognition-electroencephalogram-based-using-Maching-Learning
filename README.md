@@ -1,29 +1,42 @@
 # Human-Emotion-Recognition-electroencephalogram-based-using-Maching-Learning
 
+# Description
 
-The purpose of this project is to provide an efficient, parametric, general, and completely automatic real time classification method of electroencephalography (EEG) signals obtained from emotions. The particular characteristics of the considered high-frequency signals (theta, alpha, beta, gamma) and adapting strategies like the Fourier Transform, Features Extraction (mean, standard deviation, power) and the K-Neirest Neighbors (KNN) for signal processing, analysis and classification. Moreover, the method is thought to be used in a multi-emotions based Brain Computer Interface (BCI). The proposed method is a two stages algorithm, completely parameterized, aiming at a multi-class classification and may be considered in the framework of machine learning. The first stage, the calibration, is off-line and is devoted at the signal processing, the determination of the features and at the training of a classifier. The second stage, the real-time one, is the test on new data. The FFT is applied to avoid redundancy in the set of features whereas the classification of the selected features, and therefore of the signals, is obtained by the KNN. The average accuracy results are 82.33% (valence) and 87.32% (arousal).
+Our Human face is having a mixed emotions so we are to demonstrate the probabilities of these emotions that we have.
+
+## What does emotion recognition mean?
+
+Emotion recognition is a technique used in software that allows a program to "read" the emotions on a human face using advanced image processing. Companies have been experimenting with combining sophisticated algorithms with image processing techniques that have emerged in the past ten years to understand more about what an image or a video of a person's face tells us about how he/she is feeling and not just that but also showing the probabilities of mixed emotions a face could has.
+
+# Instalations
+
+Install dependencies using requirements.txt
+
+```
+pip install -r requirements.txt
+```
+
+# Usage
+
+The program will creat a window to display the scene capture by webcamera and a window representing the probabilities of detected emotions.
+
+> Demo
+
+```
+python real_time_video.py
+```
 
 
-# Required Library
+You can just use this with the provided pretrained model i have included in the path written in the code file, i have choosen this specificaly since it scores the best accuracy, feel free to choose any but in this case you have to run the later file train_emotion_classifier
 
-## Python
+> If you just want to run this demo, the following content can be skipped
 
-### Python version 2.7 was used to process EEG data.
+1. Train
 
+2. python train_emotion_classifier.py
 
-1. Numpy
+# Dataset
 
-2. Scipy
+I have used the dataset from kaggle.
 
-3. Emokit
-
-4. SocketIO-client
-
-## Node JS
-
-### Node JS was used as GUI.
-
-1. Express JS
-
-2. Socket IO
 
