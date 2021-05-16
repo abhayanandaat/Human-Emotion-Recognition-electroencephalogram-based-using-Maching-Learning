@@ -14,7 +14,7 @@ validation_split = .2
 verbose = 1
 num_classes = 7
 patience = 50
-base_path = 'models/'
+base_path = '/content/drive/MyDrive/Models/'
 
 # data generator
 data_generator = ImageDataGenerator(
