@@ -1,4 +1,4 @@
-# Human-Emotion-Recognition-electroencephalogram-based-using-Maching-Learning
+# Human Emotion Recognition electroencephalogram based using Maching Learning
 
 # Description
 
