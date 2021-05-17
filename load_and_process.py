@@ -8,7 +8,7 @@ image_size=(48,48)
 
 def load_fer2013():
         data = pd.read_csv(dataset_path)
-        pixels = data['pixels'].tolist()
+        pixels = data[' pixels'].tolist()
         width, height = 48, 48
         faces = []
         for pixel_sequence in pixels:
@@ -18,7 +18,7 @@ def load_fer2013():
             faces.append(face.astype('float32'))
         faces = np.asarray(faces)
         faces = np.expand_dims(faces, -1)
-        emotions = pd.get_dummies(data['emotion']).as_matrix()
+        emotions = pd.get_dummies(data['emotion']).to_numpy()
         return faces, emotions
 
 def preprocess_input(x, v2=True):
