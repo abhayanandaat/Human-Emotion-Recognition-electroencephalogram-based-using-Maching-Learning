@@ -1,5 +1,7 @@
 # ElectroEncephaloGram based Human Emotion Recognition using Maching Learning
 
+![plot](./Emotions/IMG_20210517_231736.jpg)
+
 # Description
 
 Our Human face is having a mixed emotions so we are to demonstrate the probabilities of these emotions that we have.
