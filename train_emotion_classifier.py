@@ -1,14 +1,11 @@
 from keras.callbacks import CSVLogger, ModelCheckpoint, EarlyStopping
 from keras.callbacks import ReduceLROnPlateau
 from keras.preprocessing.image import ImageDataGenerator
-from load_and_process import load_fer2013
-from load_and_process import preprocess_input
-from models.cnn import mini_XCEPTION
 from sklearn.model_selection import train_test_split
 
 # parameters
 batch_size = 32
-num_epochs = 10000
+num_epochs = 100
 input_shape = (48, 48, 1)
 validation_split = .2
 verbose = 1
@@ -43,7 +40,7 @@ early_stop = EarlyStopping('val_loss', patience=patience)
 reduce_lr = ReduceLROnPlateau('val_loss', factor=0.1,
                                   patience=int(patience/4), verbose=1)
 trained_models_path = base_path + '_mini_XCEPTION'
-model_names = trained_models_path + '.{epoch:02d}-{val_acc:.2f}.hdf5'
+model_names = trained_models_path + '.{epoch:02d}-{val_accuracy:.2f}.hdf5'
 model_checkpoint = ModelCheckpoint(model_names, 'val_loss', verbose=1,
                                                     save_best_only=True)
 callbacks = [model_checkpoint, csv_logger, early_stop, reduce_lr]
